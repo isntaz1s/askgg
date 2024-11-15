@@ -7,5 +7,5 @@ export default function SignInPage() {
         <h1>Sign In</h1>
       </div>
     </PageContainer>
-  )
+  );
 }

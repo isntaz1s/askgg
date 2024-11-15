@@ -1,4 +1,4 @@
-import { cn } from '~/lib/utils'
+import { cn } from "~/lib/utils";
 
 function Skeleton({
   className,
@@ -7,12 +7,12 @@ function Skeleton({
   return (
     <div
       className={cn(
-        'animate-pulse rounded-base bg-white dark:bg-secondaryBlack border-2 border-border dark:border-darkBorder',
+        "animate-pulse rounded-base border-2 border-border bg-white dark:border-darkBorder dark:bg-secondaryBlack",
         className,
       )}
       {...props}
     />
-  )
+  );
 }
 
-export { Skeleton }
+export { Skeleton };

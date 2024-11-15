@@ -1,15 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
-
-export interface PageSectionProps {
-  className?: string;
-  children: React.ReactNode;
-}
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+export interface PageSectionProps extends React.HTMLAttributes<HTMLElement> {}
 
 export const PageSection = (props: PageSectionProps) => {
-  return (
-    <section className={`${props.className}`}>
-      {props.children}
-    </section>
-  )
-}
+  return <section className={`${props.className}`}>{props.children}</section>;
+};
