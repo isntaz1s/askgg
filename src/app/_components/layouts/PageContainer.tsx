@@ -1,7 +1,9 @@
 import * as React from 'react';
 
-
-export interface PageContainerProps extends React.HTMLAttributes<HTMLElement> { }
+export interface PageContainerProps{
+  className?: string;
+  children: React.ReactNode;
+}
 
 export const PageContainer = (props: PageContainerProps) => {
   return (

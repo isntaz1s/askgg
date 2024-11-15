@@ -1,7 +1,10 @@
 import * as React from 'react';
 
 
-export interface PageSectionProps extends React.HTMLAttributes<HTMLElement> { }
+export interface PageSectionProps {
+  className?: string;
+  children: React.ReactNode;
+}
 
 export const PageSection = (props: PageSectionProps) => {
   return (
