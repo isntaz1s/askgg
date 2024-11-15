@@ -36,8 +36,9 @@ const config = {
         "checksVoidReturn": {
           "attributes": false
         }
-      }
+      },
     ],
+    "@typescript-eslint/no-empty-object-type": "off",
     "drizzle/enforce-delete-with-where": [
       "error",
       {
