@@ -4,8 +4,8 @@ import { Button } from "~/components/ui/button";
 import { useForm } from "react-hook-form";
 import { type CreateFormSchema, createFormSchema } from '../form/form-schema';
 
-export function CreateFormMessage(props: any) {
-  const form = useForm();
+export function CreateFormMessage() {
+  const form = useForm<CreateFormSchema>();
   return (
     <h1>...</h1>
   )
