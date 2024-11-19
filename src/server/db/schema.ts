@@ -1,3 +1,4 @@
+import { create } from "domain";
 import { relations, sql } from "drizzle-orm";
 import {
   index,
@@ -38,6 +39,13 @@ export const posts = createTable(
     nameIndex: index("name_idx").on(example.name),
   })
 );
+
+export const messages = createTable("message", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  createdById: varchar("created_by", { length: 255 }).default("anonymous").notNull().references(() => users.id),
+  body: text("body").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).default(sql`CURRENT_TIMESTAMP`).notNull()
+});
 
 export const users = createTable("user", {
   id: varchar("id", { length: 255 })
